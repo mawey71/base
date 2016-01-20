@@ -39,7 +39,7 @@ return [
     |
     */
 
-    'url' => 'http://localhost:666/behabitat_v3',
+    'url' => 'http://localhost',
 
     /*
     |--------------------------------------------------------------------------
@@ -155,7 +155,9 @@ return [
         App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        
+        'Cviebrock\EloquentSluggable\SluggableServiceProvider',
+        'Laracasts\Flash\FlashServiceProvider',
+        Collective\Html\HtmlServiceProvider::class,
     ],
 
     /*
@@ -201,7 +203,9 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
-
+        'Flash' => 'Laracasts\Flash\Flash',
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
     ],
 
 ];
